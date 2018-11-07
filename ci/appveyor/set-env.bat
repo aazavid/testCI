@@ -54,7 +54,7 @@ set CMAKE_GENERATOR=Visual Studio 14 2015
 shift
 goto :loop
 
-:msvc14
+:msvc15
 set TOOLCHAIN=msvc15
 set CMAKE_GENERATOR=Visual Studio 15 2017
 shift
