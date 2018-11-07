@@ -49,7 +49,7 @@ test_script:
     # - ctest -C %CONFIGURATION% --output-on-failure
 
 artifacts:
-    - path: build\stage\$(APPVEYOR_REPO_NAME)\releases\download\$(APPVEYOR_REPO_TAG_NAME)\*.zip
+    - path: c:\projects\my-prj\
       name: package_name
 
 deploy:
