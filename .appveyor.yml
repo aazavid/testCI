@@ -49,8 +49,8 @@ test_script:
     # - ctest -C %CONFIGURATION% --output-on-failure
 
 artifacts:
-    - path: c:\projects\my-prj\
-      name: package_name
+    #- path: build\stage\$(APPVEYOR_REPO_NAME)\releases\download\$(APPVEYOR_REPO_TAG_NAME)\*.zip
+    #  name: package_name
 
 deploy:
     # выкладываем tagged-коммиты на GitHub Releases:
