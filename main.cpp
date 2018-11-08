@@ -1,12 +1,13 @@
 #include "hello.h"
-#include <windows.h>
+#include <iostream>
+
 
 int main(int argc, char** argv)
 
 {
-
+	char c;
 	hello_world();
-	system("pause");
+	std::cin >> c;
 	return 0;
 
 }
