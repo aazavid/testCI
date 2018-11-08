@@ -1,0 +1,19 @@
+image: ubuntu:14.04
+
+# Define commands that run before each job's script
+before_script:
+  - apt-get update
+  - apt-get install -y gcc g++
+
+# Try to compile our sample hello world app
+compile:
+  script:
+  # скрипт сборки и тестирования проекта:
+  - mkdir build
+  - cd build
+  - cmake .. -DCMAKE_BUILD_TYPE=amd64=Release
+  - cmake --build .
+  - ctest --output-on-failure
+  artifacts:
+    paths:
+    - helloworld
