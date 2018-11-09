@@ -4,9 +4,7 @@ image: ubuntu:14.04
 before_script:
   - apt-get update
   - apt-get install -y gcc g++
-  - apt-get install software-properties-common
-  - add-apt-repository ppa:george-edison55/cmake-3.x
-  - apt-get update
+  - apt-get install -y cmake
 #When cmake is not yet installed:
 
   - apt-get install cmake
@@ -19,9 +17,9 @@ compile:
   # скрипт сборки и тестирования проекта:
   - mkdir build
   - cd build
-  - cmake .. -DCMAKE_BUILD_TYPE=amd64=Release
+  - cmake ../
   - cmake --build .
-  - ctest --output-on-failure
-  artifacts:
-    paths:
-    - helloworld
+  #- ctest --output-on-failure
+  #artifacts:
+    #paths:
+   # - helloworld
