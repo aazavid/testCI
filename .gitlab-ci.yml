@@ -5,11 +5,7 @@ before_script:
   - apt-get update
   - apt-get install -y gcc g++
   - apt-get install -y cmake
-#When cmake is not yet installed:
 
-  - apt-get install cmake
-#When cmake is already installed:
-  - apt-get upgrade
 
 # Try to compile our sample hello world app
 compile:
